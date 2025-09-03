@@ -3,31 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toni Nadal - Ingeniero Biomédico 3D</title>
+  <title>Toni Nadal - Ingeniero Biomédico</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Toni Nadal</h1>
-    <p>Ingeniero Biomédico 3D | Innovación en Salud</p>
+  <!-- Barra superior -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <span class="logo">Toni Nadal</span>
+    </div>
+    <div class="navbar-right">
+      <a href="#hero">Conóceme</a>
+      <a href="#timeline">Experiencia</a>
+      <a href="#contact">Contacta</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">🌐 Idioma</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="setLanguage('es')">🇪🇸 Español</a>
+          <a href="#" onclick="setLanguage('en')">🇬🇧 English</a>
+          <a href="#" onclick="setLanguage('ca')">🇫🇷 Català</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="about.html">Sobre mí</a>
-    <a href="projects.html">Proyectos</a>
-    <a href="contact.html">Contacto</a>
-  </nav>
+  <!-- Banner de inicio -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 id="hero-title"></h1>
+      <p id="hero-subtitle"></p>
+      <a id="hero-cta" href="#contact" class="btn"></a>
+    </div>
+  </section>
 
-  <div class="container">
-    <section>
-      <h2>Bienvenido a mi sitio web</h2>
-      <p>Explora mis proyectos y descubre cómo la ingeniería biomédica 3D puede transformar la salud.</p>
-    </section>
-  </div>
+  <!-- Contenido principal -->
+  <main>
+    <section id="about"></section>
+    <section id="timeline"></section>
+    <section id="contact"></section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Toni Nadal. Todos los derechos reservados.</p>
-  </footer>
+  <script src="main.js"></script>
+  <script>
+    setLanguage('es'); // idioma por defecto
+  </script>
 </body>
 </html>
