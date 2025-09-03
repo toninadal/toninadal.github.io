@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "titles": [
+      "EXPERTO EN PRODUCTO SANITARIO",
+      "DOCENTE Y DIVULGADOR",
+      "PROJECT DEVELOPER",
+      "ESPECIALIZADO EN FABRICACIÓN ADITIVA",
+      "I+D+I"
+    ],
+    "subtitle": "Capacítate para la integración de la ISO-13485, marcado CE y FDA",
+    "cta": "Contacta"
+  },
+  "about": {
+    "title": "¿QUÉ PUEDO HACER POR TI?",
+    "text": "¿Quieres integrar la IMPRESIÓN 3D en tu empresa? ¿Deseas innovar en el sector de la SALUD? Te acompaño para avanzar de una forma eficiente en todo tipo de proyectos tecnológicos."
+  },
+  "timeline": [
+    {
+      "year": "2020",
+      "title": "Posgrado: Experto en Productos Sanitarios",
+      "description": "UB, Barcelona (2019-2020). Proyecto final: Technical File de inhalador. Regulación UE y Marcado CE, ISO 13485, FDA."
+    },
+    {
+      "year": "2018",
+      "title": "MIT (xPro) - Additive Manufacturing",
+      "description": "Curso internacional sobre impresión 3D, diseño generativo y workflows. Nota final: 9,8/10."
+    }
+  ],
+  "contact": {
+    "email":
