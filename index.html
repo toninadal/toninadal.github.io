@@ -17,12 +17,13 @@
       <a href="#timeline">Experiencia</a>
       <a href="#contact">Contacta</a>
 
+      <!-- Selector de idioma -->
       <div class="dropdown">
-        <button class="dropbtn">🌐 Idioma</button>
-        <div class="dropdown-content">
-          <a href="#" onclick="setLanguage('es')">🇪🇸 Español</a>
-          <a href="#" onclick="setLanguage('en')">🇬🇧 English</a>
-          <a href="#" onclick="setLanguage('ca')">🇫🇷 Català</a>
+        <button id="language-btn" class="dropbtn">🇪🇸</button>
+        <div id="language-menu" class="dropdown-content">
+          <a href="#" data-lang="es">🇪🇸 Español</a>
+          <a href="#" data-lang="en">🇬🇧 English</a>
+          <a href="#" data-lang="ca"><img src="senyera.png" alt="Català" style="width:24px;height:16px;"> Català</a>
         </div>
       </div>
     </div>
@@ -45,8 +46,5 @@
   </main>
 
   <script src="main.js"></script>
-  <script>
-    setLanguage('es'); // idioma por defecto
-  </script>
 </body>
 </html>
