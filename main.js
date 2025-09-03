@@ -1,10 +1,18 @@
 let heroIndex = 0;
 let heroTitles = [];
+let currentLanguage = "es";
 
 function setLanguage(lang) {
+  currentLanguage = lang;
   fetch(`./data/${lang}.json`)
     .then(res => res.json())
     .then(data => {
+      // Actualizar bandera del botón
+      const langBtn = document.getElementById("language-btn");
+      if(lang === "es") langBtn.textContent = "🇪🇸";
+      if(lang === "en") langBtn.textContent = "🇬🇧";
+      if(lang === "ca") langBtn.textContent = "🇫🇷";
+
       // Hero banner
       heroTitles = data.hero.titles;
       document.getElementById("hero-subtitle").textContent = data.hero.subtitle;
@@ -45,3 +53,28 @@ function rotateHeroText() {
   heroIndex = (heroIndex + 1) % heroTitles.length;
   setTimeout(rotateHeroText, 3000);
 }
+
+// Mostrar menú de idiomas al hacer clic en la bandera
+document.getElementById("language-btn").addEventListener("click", () => {
+  document.getElementById("language-menu").classList.toggle("show");
+});
+
+// Cambiar idioma al hacer clic en opción
+document.querySelectorAll("#language-menu a").forEach(item => {
+  item.addEventListener("click", e => {
+    e.preventDefault();
+    const lang = item.getAttribute("data-lang");
+    setLanguage(lang);
+    document.getElementById("language-menu").classList.remove("show");
+  });
+});
+
+// Ocultar menú si se hace clic fuera
+window.addEventListener("click", function(e) {
+  if (!e.target.matches('#language-btn')) {
+    document.getElementById("language-menu").classList.remove("show");
+  }
+});
+
+// Inicializar idioma
+setLanguage(currentLanguage);
